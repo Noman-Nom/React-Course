@@ -20,11 +20,22 @@ const incrimentCounter =()=>{
   
   // yahan par actual men counter update to ho rah he consol mn show bgi kar rha he par wo ui ko update nhi kar rha he isi wajh se hooks ka concept aya k ap ui ko update kar sakte hen 
 
-  setCounter(counter + 1)
+
+    if (counter <20) {
+      setCounter(counter + 1)
+      
+    }
 }
 
 const decrimentCounter = ()=>{
-  setCounter(counter-1)
+
+  if (counter > 0) {
+    setCounter(counter-1)
+    
+  }
+
+
+  // setCounter(counter-1)
 }
 
   return (
