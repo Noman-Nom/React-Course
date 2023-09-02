@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
@@ -22,10 +22,10 @@ function App() {
     if (characterAllowed) {
       str +="!@#$%^&*-_+=[]{}~`"
     }
-    for (let i = 0; i <= array.length; i++) {
+    for (let i = 0; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1)
       
-      pass = str.charAt(char)
+      pass  += str.charAt(char)
     }
 
     setPassword(pass)
@@ -36,12 +36,57 @@ function App() {
   
   ,[length,numberAllowed,characterAllowed,password])
 
-  return (
-    <div>
-     
-      <h1 className='text-4xl text-center text-white mt-10 '>Password Generator</h1>
+useEffect(()=>{
 
+  passwordGenerator()
+}
+
+,[length,numberAllowed,characterAllowed])
+
+  return (
+    
+ <div>
+  <h1>Password generator </h1>
+
+  <div>
+    <input type="text" 
+      value={password}
+      placeholder='password'
+      readOnly
+    />
+    <button>Copy</button>
+
+  </div>
+
+  <div>
+    <div>
+      <input type="range"
+      min={8} 
+      max={100}
+      value={length}
+      className='cursor-pointer'
+      onChange={(e)=>{setLength(e.target.value)}}
+      />
+      <label htmlFor="">length: {length}</label>
     </div>
+
+    <div>
+      <input type="checkbox"
+      defaultChecked={numberAllowed}
+    onChange={()=>{setNumberAllowed((prev)=>!prev)}}
+      />
+      <label htmlFor="">Numbers</label>
+
+      <input type="checkbox"
+      defaultChecked={characterAllowed}
+    onChange={()=>{setCharacterAllowed((prev)=>!prev)}}
+      />
+      <label htmlFor="">Character</label>
+    </div>
+  </div>
+ </div>
+
+
   )
 }
 
