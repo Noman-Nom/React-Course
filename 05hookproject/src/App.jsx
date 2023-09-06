@@ -61,7 +61,7 @@ useEffect(()=>{
       value={password}
       placeholder='password'
       readOnly
-      ref={passwordRef}
+      ref={password}
     />
     <button onClick={copypasswordToClipboard}>Copy</button>
 
