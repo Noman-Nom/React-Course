@@ -1,3 +1,15 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+
+body{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: url('https://cdn.pixabay.com/photo/2015/04/04/11/41/statistics-706379_1280.png');
+    background-size: cover;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+}

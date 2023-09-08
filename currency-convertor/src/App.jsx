@@ -1,16 +1,95 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { InputBox } from "./components";
+import useCurrencyInfo from "./hooks/useCurrencyInfo";
+
+import "./App.css";
+import Button from "./components/Button";
+import SwapButton from "./components/SwapButton";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [amount, setAmount] = useState(0);
+  const [from, setFrom] = useState("usd");
+  const [to, setTo] = useState("pkr");
+  const [convertedAmount, setConvertedAmount] = useState(0);
+
+  const currencyInfo = useCurrencyInfo(from);
+
+  const options = Object.keys(currencyInfo);
+  const swap = () => {
+    setFrom(to);
+    setTo(from);
+    setConvertedAmount(amount);
+    setAmount(convertedAmount);
+  };
+
+  const convert = () => {
+    setConvertedAmount(amount * currencyInfo[to]);
+  };
 
   return (
-    <>
-     <h1>Currency Convertor</h1>
-    </>
-  )
+    <div>
+
+       <h1 className="heading">
+          React <br />
+          <span>Currency Calculator</span>
+        </h1>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          convert();
+        }}
+      >
+
+        
+          <InputBox
+           className="inp1"
+          
+          label="From"
+          amount={amount}
+          currencyOptions={options}
+          onCurrencyChange={(currency)=>
+          setAmount(amount)
+          }
+          onAmountChange={(amount)=>
+            setAmount(amount)}
+            selectCurrency ={from}
+
+          />
+
+        <SwapButton 
+        swap={swap}
+        />
+
+      
+
+
+          <InputBox
+          
+          label="To"
+          amount={convertedAmount}
+          currencyOptions={options}
+          onCurrencyChange={(currency)=>
+          setAmount(currency)
+          }
+          onAmountChange={(amount)=>
+            setAmount(amount)}
+            selectCurrency ={from}
+
+          />
+          <Button from={from} to={to}/>
+
+
+
+       
+
+      
+
+       
+
+
+      </form>
+    </div>
+  );
 }
 
-export default App
+export default App;
