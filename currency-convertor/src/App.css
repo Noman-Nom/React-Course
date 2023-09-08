@@ -1,14 +1,4 @@
-/* .btn{
-    background: #ffe607;
-    border: 0;
-    outline: 0;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: 500;
-    color: #d80000;
-    cursor: pointer;
-    font-size: 18px;
-} */
+
 .heading{
     font-size: 40px;
     font-weight: 700;
@@ -21,14 +11,9 @@
 .heading span{
     color: rgb(246, 246, 75);
 }
-/* .btn1{
-    background-color: #ffff76;
-    border: 0;
-    outline: 0;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: 500;
-    color: #333;
-    cursor: pointer;
-    font-size: 18px;
-} */
+.sbtn{
+    position: absolute;
+    top: 280px;
+    left: 310px;
+
+}

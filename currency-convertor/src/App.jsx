@@ -56,9 +56,13 @@ function App() {
 
           />
 
-        <SwapButton 
+              <div  className="sbtn">
+              <SwapButton 
+       
         swap={swap}
         />
+              </div>
+       
 
       
 

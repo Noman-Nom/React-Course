@@ -1,15 +1,16 @@
  button{
 
-    background: #f8e437;
+  background-color: #ffff76;
       border: 0;
       outline: 0;
       padding: 15px 30px;
       border-radius: 5px;
       font-weight: 500;
-      color: #d80000;
+      color: #000000;
       cursor: pointer;
       font-size: 18px;
       width: 100px;
+      
       
       
   
