@@ -7,7 +7,7 @@ const InputBox = ({
     onAmountChange,
     onCurrencyChange,
     currencyOptions = [],
-    selectCurrrency = "usd",
+    selectCurrrency  ,
     amountDisable = false,
     currencyDisable = false,
 }) => {
@@ -32,7 +32,7 @@ const InputBox = ({
           type="number" />
 
           <select 
-          value={selectCurrrency}
+          value={selectCurrrency }
           onChange={(e)=>  onCurrencyChange && onCurrencyChange(e.target.value)}
 
           disabled={currencyDisable}

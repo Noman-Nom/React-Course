@@ -11,6 +11,7 @@ function App() {
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("pkr");
   const [convertedAmount, setConvertedAmount] = useState(0);
+ 
 
   const currencyInfo = useCurrencyInfo(from);
 
@@ -48,7 +49,7 @@ function App() {
           amount={amount}
           currencyOptions={options}
           onCurrencyChange={(currency)=>
-          setAmount(amount)
+          setFrom(currency)
           }
           onAmountChange={(amount)=>
             setAmount(amount)}
@@ -73,11 +74,11 @@ function App() {
           amount={convertedAmount}
           currencyOptions={options}
           onCurrencyChange={(currency)=>
-          setAmount(currency)
+          setTo(currency)
           }
           onAmountChange={(amount)=>
-            setAmount(amount)}
-            selectCurrency ={from}
+            setConvertedAmount(amount)}
+            selectCurrency ={to}
 
           />
           <Button from={from} to={to}/>
