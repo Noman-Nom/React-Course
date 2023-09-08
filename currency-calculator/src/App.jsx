@@ -29,7 +29,7 @@ function App() {
     <div
     className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
     style={{
-        backgroundImage: `url('https://images.pexels.com/photos/5561923/pexels-photo-5561923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+        backgroundImage: `url('https://cdn.pixabay.com/photo/2015/08/28/08/46/stock-exchange-911619_1280.jpg')`,
     }}
 >
     <div className="w-full">
@@ -50,6 +50,7 @@ function App() {
                         setAmount(amount)
                       
                         }
+                        onAmountChange={(amount)=>setAmount(amount)}
                         selectCurrrency={from}
                         
                     />
