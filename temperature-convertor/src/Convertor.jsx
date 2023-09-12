@@ -24,7 +24,7 @@ const Convertor = () => {
 
   return (
     <div>
-    <h1>Temperature Converter</h1>
+
     <div>
       <label>Fahrenheit: </label>
       <input
