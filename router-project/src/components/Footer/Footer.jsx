@@ -36,7 +36,7 @@ const Footer = () => {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/hiteshchoudhary"
+                                        href="https://github.com/Noman-Nom"
                                         className="hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
