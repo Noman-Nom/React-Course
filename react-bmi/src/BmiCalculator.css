@@ -5,6 +5,13 @@
     gap: 12px;
     align-items: center;
     justify-content: center;
+    background-color: rgb(214, 245, 245);
+    padding: 30px 40px 50px;
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 .form{
     display: flex;
@@ -13,4 +20,12 @@
     gap: 12px;
     align-items: center;
     justify-content: center;
+}
+.form__fields{
+    display: flex;
+flex-direction: column;
+
+}
+input{
+    padding: 5px 5px ;
 }

@@ -30,11 +30,11 @@ const BmiCalculator = () => {
         <div className='app'>
                 <form className='form' onSubmit={handleSubmit}>
             <h1>BMI-CALCULATOR IN REACT JS</h1>
-            <div>
+            <div className='form__fields'>
                 <label>Height in: CM</label>
                 <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
             </div>
-            <div>
+            <div className='form__fields'>
                 <label>Weight in: KG</label>
                 <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
             </div>
