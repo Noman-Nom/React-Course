@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import  './BmiCalculator.css'
+import Alert from 'react-bootstrap/Alert';
 
 const BmiCalculator = () => {
     const [height, setHeight] = useState('')
@@ -8,6 +9,7 @@ const BmiCalculator = () => {
     const [weightUnit, setWeightUnit] = useState('kg')
     const [heightUnit, setHeightUnit] = useState('cm')
     const [result, setResult] = useState(null)
+    const [bmiCategory, setBMICategory] = useState('');
 
     // console.log(height)
     // console.log(weight)
@@ -36,8 +38,21 @@ const BmiCalculator = () => {
         // console.log(bmi)
 
         setResult(bmi)
+        setHeight("")
+        setWeight("")
         }
-   
+
+        let category = '';
+      if (result < 18.5) {
+        category = 'Underweight';
+      } else if (result < 24.9) {
+        category = 'Normal Weight';
+      } else if (result < 29.9) {
+        category = 'Overweight';
+      } else {
+        category = 'Obese';
+      }
+      setBMICategory(category)
     }
 
 
@@ -70,7 +85,13 @@ const BmiCalculator = () => {
                 <p>{result}</p>
             </div>
 
-
+            {result && (
+        <div className='headerAlert'>
+          <Alert variant="success">
+            Your BMI is {result}, indicating your weight is in the {bmiCategory} category for adults of your height.
+          </Alert>
+        </div>
+      )}
         </div>
     )
 }
