@@ -5,7 +5,7 @@
     gap: 12px;
     align-items: center;
     justify-content: center;
-    background-color: rgb(214, 245, 245);
+    background-color: rgb(174, 174, 174);
     padding: 30px 40px 50px;
     width: 700px;
     position: absolute;
@@ -24,8 +24,24 @@
 .form__fields{
     display: flex;
 flex-direction: column;
+gap: 5px;
+width: 100%;
+max-width: 300px;
 
 }
 input{
-    padding: 5px 5px ;
+    padding: 15px 5px ;
+    background: transparent;
+    outline: none;
+    /* border: none; */
+    border-radius: 54px;
+    font-size: 22px;
+}
+select{
+    padding: 15px 5px ;
+    background: transparent;
+    outline: none;
+    /* border: none; */
+    border-radius: 54px;
+    font-size: 22px;
 }
