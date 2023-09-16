@@ -19,6 +19,9 @@ const BmiCalculator = () => {
           } else {
             const bmi = (weight / ((height * height) / 10000)).toFixed(2);
             setResult(bmi);
+            setHeight('')
+            setWeight('')
+        
           }
     }
 
