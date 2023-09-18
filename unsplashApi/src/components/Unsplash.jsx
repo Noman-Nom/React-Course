@@ -20,12 +20,12 @@ const Unsplash = () => {
 
   // function.....................................
 
-useEffect(()=>{
+// useEffect(()=>{
  
 
 
-  searchImages()
-},[inputData])
+//   searchImages()
+// },[inputData])
 const searchImages = async()=>{
   const url = `https://api.unsplash.com/search/photos/?page=${page}&query=${inputData}&client_id=${key}`;
   // const url = `https://api.unsplash.com/photos/?client_id=${key}`;
@@ -34,7 +34,7 @@ const searchImages = async()=>{
     const response=await fetch(url)
     const data = await response.json()
     const newResults = data.results
-  //  console.log(data[0])  
+   console.log(data)  
 
    if(page===1){
     setResults(newResults)
@@ -43,9 +43,13 @@ const searchImages = async()=>{
    }
     setPage(page + 1)
     setShowMore(page>1)
+    setInputData("")
   } catch (error) {
-    console.log(error)
+    console.log("Error fetching data:", error);
+
+
   }
+
 
   
 }
@@ -61,7 +65,9 @@ const handleShowMore = ()=>{
   const handleSubmit=(e)=>{
     e.preventDefault()
     setPage(1)
+    console.log("click")
     searchImages()
+
     
   }
   
