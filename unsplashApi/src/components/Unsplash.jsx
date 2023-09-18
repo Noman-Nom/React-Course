@@ -80,6 +80,7 @@ const handleShowMore = ()=>{
 
      <div className="search-results">
         {results.map((result) => (
+          // <div className='row'>
           <div className="col" key={result.id}>
             <img src={result.urls.small} alt={result.alt_description} />
             <h4>
@@ -88,6 +89,9 @@ const handleShowMore = ()=>{
               </a>
             </h4>
           </div>
+
+          // {/* </div> */}
+
         ))}
       </div>
 
