@@ -53,6 +53,7 @@ const BmiCalculator = () => {
         category = 'Obese';
       }
       setBMICategory(category)
+      // console.log(category)
     }
 
 
