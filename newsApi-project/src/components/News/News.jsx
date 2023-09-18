@@ -2,11 +2,13 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import './News.css'
 
+
 const News = () => {
     //  variables 
     const ApiKey = 'bcd2aeba084a4b89b74f151b9d2bd920';
     const catogery = "general"
     const pageSize = 9
+    let page = 1
   
 
 
@@ -58,6 +60,7 @@ const News = () => {
 
             
         </div>
+        
     )
 }
 
