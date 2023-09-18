@@ -12,16 +12,17 @@ const Unsplash = () => {
 // useStates.................................
   const [inputData, setInputData] = useState("")
   const [results, setResults] = useState([])
+  const [page, setPage] = useState(1)
   // console.log(inputData)
 
 
 
   // function.....................................
 
-
+useEffect(()=>{
   const searchImages = async()=>{
-    // const url = `https://api.unsplash.com/search/photos/?page=${page}&query=${inputData}&client_id=${key}`;
-    const url = `https://api.unsplash.com/photos/?client_id=${key}`;
+    const url = `https://api.unsplash.com/search/photos/?page=${page}&query=${inputData}&client_id=${key}`;
+    // const url = `https://api.unsplash.com/photos/?client_id=${key}`;
 
     try {
       const response=await fetch(url)
@@ -29,14 +30,23 @@ const Unsplash = () => {
       const newResults = data.results
      console.log(data[0])  
 
+     if(page===1){
+      setResults(newResults)
+     }else{
+      setResults((prevResults)=>[...prevResults,...newResults])
+     }
       
     } catch (error) {
       console.log(error)
     }
   }
- 
 
   searchImages()
+},[inputData])
+  
+ 
+
+
 
 
   const handleSubmit=(e)=>{
@@ -55,6 +65,19 @@ const Unsplash = () => {
       <button type='submit' id='search-btn'>Search</button>
 
      </form>
+
+     <div className="search-results">
+        {results.map((result) => (
+          <div className="col" key={result.id}>
+            <img src={result.urls.small} alt={result.alt_description} />
+            <h4>
+              <a href={result.links.html} target="_blank" rel="noopener noreferrer">
+                {result.alt_description}
+              </a>
+            </h4>
+          </div>
+        ))}
+      </div>
 
     </div>
   )
