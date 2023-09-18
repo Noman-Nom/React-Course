@@ -13,6 +13,7 @@ const Unsplash = () => {
   const [inputData, setInputData] = useState("")
   const [results, setResults] = useState([])
   const [page, setPage] = useState(1)
+  const [showMore, setShowMore] = useState(false)
   // console.log(inputData)
 
 
@@ -20,39 +21,50 @@ const Unsplash = () => {
   // function.....................................
 
 useEffect(()=>{
-  const searchImages = async()=>{
-    const url = `https://api.unsplash.com/search/photos/?page=${page}&query=${inputData}&client_id=${key}`;
-    // const url = `https://api.unsplash.com/photos/?client_id=${key}`;
+ 
 
-    try {
-      const response=await fetch(url)
-      const data = await response.json()
-      const newResults = data.results
-     console.log(data[0])  
-
-     if(page===1){
-      setResults(newResults)
-     }else{
-      setResults((prevResults)=>[...prevResults,...newResults])
-     }
-      
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
   searchImages()
 },[inputData])
+const searchImages = async()=>{
+  const url = `https://api.unsplash.com/search/photos/?page=${page}&query=${inputData}&client_id=${key}`;
+  // const url = `https://api.unsplash.com/photos/?client_id=${key}`;
+
+  try {
+    const response=await fetch(url)
+    const data = await response.json()
+    const newResults = data.results
+  //  console.log(data[0])  
+
+   if(page===1){
+    setResults(newResults)
+   }else{
+    setResults((prevResults)=>[...prevResults,...newResults])
+   }
+    setPage(page + 1)
+    setShowMore(page>1)
+  } catch (error) {
+    console.log(error)
+  }
+
+  
+}
   
  
+const handleShowMore = ()=>{
+  searchImages()
+}
 
 
 
 
   const handleSubmit=(e)=>{
     e.preventDefault()
+    setPage(1)
+    searchImages()
     
   }
+  
   
 
   return (
@@ -78,6 +90,10 @@ useEffect(()=>{
           </div>
         ))}
       </div>
+
+      {showMore && (<button id='show-more-btn' onClick={handleShowMore}>
+        ShowMore
+      </button>)}
 
     </div>
   )
