@@ -30,7 +30,33 @@ const News = () => {
         searchNews()
     }, [])
     return (
-        <div>News</div>
+        <div className='News'>
+            {
+                newsData.map((article,index)=>(
+
+                    <div key={index} className="card" style={{ width: '18rem' }}>
+                    <img src={!article.urlToImage?"https://bnr-external-prod.imgix.net/UPnQ0q4urJLhYo-6k_LrvnuCV48.jpg?q=45&w=1500&auto=format,compress":article.urlToImage} className="card-img-top" alt="..." />
+                    <div className="card-body">
+                      <h5 className="card-title">Card title</h5>
+                      <p className="card-text">
+                      {article.description && article.description.length > 50
+          ? `${article.description.substring(0, 50)}...` // Truncate to 100 characters
+          : article.description}
+                      </p>
+                      <a href="#" className="btn btn-primary">
+                        {article.author}
+                      </a>
+                    </div>
+                  </div>
+
+                    
+
+
+                ))
+            }
+
+            
+        </div>
     )
 }
 
