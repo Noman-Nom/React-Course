@@ -39,20 +39,21 @@ const  handleClick = ()=>{
         </div>
                    <div className="food-container">
                    <h2>Your Search Food:</h2>
+
+                   <div className="row" >
                         {
                             data.map((meal)=>(
                                 
-                                <div className="row" key={meal.idMeal
-                                }>
-                                <div className="col">
+                                <div className="col" key={meal.idMeal
+                                }  >
                                   <img src={meal.strMealThumb} alt="" />
                                   <h4>{meal.strMeal}</h4>
                                   <a href="#">{meal.strMeal}</a>
                                 </div>
-                              </div>
 
-                            ))
-                        }
+))
+}
+</div>
 
                    </div>
                      
