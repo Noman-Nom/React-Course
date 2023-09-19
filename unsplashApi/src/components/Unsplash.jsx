@@ -63,8 +63,9 @@ const handleShowMore = ()=>{
 
 
   const handleSubmit=(e)=>{
+
     e.preventDefault()
-    setPage(1)
+    // setPage(1)
     console.log("click")
     searchImages()
 
