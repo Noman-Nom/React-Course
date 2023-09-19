@@ -26,6 +26,7 @@ const getData = async ()=>{
 const  handleClick = ()=>{
         // console.log(inputData)
         getData()
+        setInputData('')
 }
 
 
