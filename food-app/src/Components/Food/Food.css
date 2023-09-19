@@ -66,11 +66,31 @@ button{
 }
 .col{
     flex-basis: 25%;
-    min-width: 200px;
+    min-width: 240px;
     padding: 10px;
     margin-bottom: 50px;
     transition: 1s all ease-in-out;
 }
 .col img{
     width: 100%;
+    min-height: 300px;
+    min-width: 300px;
+    
+}
+h2 {
+    margin-top: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    color:#b73b19;
+    text-align: center;
+    margin-bottom: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+h4{
+    font-size: 22px;
+    color: #b73b19;
 }
