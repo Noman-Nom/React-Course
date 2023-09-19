@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import './Food.css'
 
@@ -10,10 +10,22 @@ const [inputData, setInputData] = useState('')
 // use effects......................................
 
 
+const getData = async ()=>{
+            const url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${inputData}`
+             const response = await fetch(url)
+             const data = await response.json()
+            //  console.log(data)
+            setData(data.meals)
+            console.log(data.meals)
+
+}
+
+
 // functions.....................................
 
 const  handleClick = ()=>{
-
+        // console.log(inputData)
+        getData()
 }
 
 
@@ -24,8 +36,27 @@ const  handleClick = ()=>{
             <input type="text" value={inputData} onChange={(e)=>setInputData(e.target.value)} />
             <button onClick={handleClick}>Search</button>
         </div>
-    </div>
+                   <div className="food-container">
+                   <h2>Your Search Food:</h2>
+                        {
+                            data.map((meal)=>(
+                                
+                                <div className="row" key={meal.idMeal
+                                }>
+                                <div className="col">
+                                  <img src={meal.strMealThumb} alt="" />
+                                  <h4>{meal.strMeal}</h4>
+                                  <a href="#">{meal.strMeal}</a>
+                                </div>
+                              </div>
 
+                            ))
+                        }
+
+                   </div>
+                     
+    </div>
+                
   )
 }
 
