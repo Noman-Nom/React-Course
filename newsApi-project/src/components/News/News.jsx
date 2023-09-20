@@ -43,8 +43,7 @@ const News = () => {
                       <h5 className="card-title">Card title</h5>
                       <p className="card-text">
                       {article.description && article.description.length > 50
-          ? `${article.description.substring(0, 50)}...` // Truncate to 100 characters
-          : article.description}
+          ? `${article.description.substring(0, 50)}...`: article.description}
                       </p>
                       <a href="#" className="btn btn-primary">
                         {article.author}
