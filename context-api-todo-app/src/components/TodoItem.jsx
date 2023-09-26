@@ -1,9 +1,28 @@
 import React from 'react'
+import { useState } from 'react';
 import { useTodo } from '../Contexts';
 
 const TodoItem = ({todo}) => {
-
+//  states..........
     const {updateTodo,deleteTodo,toggleCompleted} = useTodo()
+
+    const [isTodoEditable, setIsTodoEditable] = useState(false)
+
+    const [todoMsg, setTodoMsg] = useState(todo.todo)
+
+    // ........functions
+
+    const editTodo = ()=>{
+        updateTodo(todo.id,{...todo,todo: todoMsg})
+        setIsTodoEditable(false)
+    }
+    
+    const toggleCompleted1 = ()=>{
+        toggleCompleted(todo.id)
+
+    }
+
+
     return (
         <div
             className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
@@ -14,7 +33,7 @@ const TodoItem = ({todo}) => {
                 type="checkbox"
                 className="cursor-pointer"
                 checked={todo.completed}
-                onChange={toggleCompleted}
+                onChange={toggleCompleted1}
             />
             <input
                 type="text"
