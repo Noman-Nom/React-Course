@@ -38,8 +38,19 @@ function App() {
 
   //  ...............Use Effect .................
   useEffect(()=>{
-          
+            const todos = JSON.parse(localStorage.getItem('todos')) 
+
+            if(todos && todos.length> 0){
+              setTodos(todos)
+            }
   },[])
+
+
+  //  2nd useEffect is use for adding context api data in localstorage when todos add in our web 
+      useEffect(()=>{
+            localStorage.setItem("todos", JSON.stringify(todos))
+      },[todos])
+
 
   return (
 
