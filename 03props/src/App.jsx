@@ -13,6 +13,7 @@ function App() {
       {/* <h1 className='bg-green-400 text-black p-4 rounded-xl'>Tailwan Test</h1> */}
      <Card Name = 'Momna' btnText='vsit Site' Desc='ajdfj jksl jlahdjash '/>
      <Card Name = 'Adeeba' btnText='vsit Site' Desc='She is Good Girl '/>
+     <Card Name = 'waqasi' btnText='vsit Site' Desc='kali larki '/>
     </div>
   )
 }
