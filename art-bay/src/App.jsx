@@ -3,20 +3,31 @@ import { useState,useEffect } from 'react';
 
 
 const App = () => {
+  // let Api_Key = "NiDhEnXNtbOWTueH0yzEr0xmZ2MCPfczCeZwmPZ-xwo";
 
-
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState('boys')
   const [data, setData] = useState([])
 
- 
-  let Api_Key = "NiDhEnXNtbOWTueH0yzEr0xmZ2MCPfczCeZwmPZ-xwo";
 
-  const getData = async (e) => {
+  useEffect(()=>{
+     
+    getData()
+   
+
+        
+
+  },[input])
+
+ 
+  
+
+  const getData = async () => {
 
     try {
-          e.preventDefault()
+        
 
-      const response = await fetch(`https://api.unsplash.com/search/photos/?query=${input}&client_id=${Api_Key}`)
+         
+      const response = await fetch(`https://api.unsplash.com/search/photos/?query=${input}&client_id=NiDhEnXNtbOWTueH0yzEr0xmZ2MCPfczCeZwmPZ-xwo`)
 
       const data = await response.json()
       console.log(data.results)
@@ -33,7 +44,9 @@ const App = () => {
   return (
     <div>
 
-      <form onSubmit={getData} >
+      <form onSubmit={(e)=>{
+        e.preventDefault()
+      }}  >
         <input  type="text" placeholder='search your fvt images'
         
         value={input}

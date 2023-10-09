@@ -26,6 +26,7 @@ useEffect(()=>{
 
   searchImages()
 },[inputData])
+
 const searchImages = async()=>{
   const url = `https://api.unsplash.com/search/photos/?page=${page}&query=${inputData}&client_id=${key}`;
   // const url = `https://api.unsplash.com/photos/?client_id=${key}`;

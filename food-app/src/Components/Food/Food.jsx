@@ -9,6 +9,8 @@ const Food = () => {
 
     // use effects......................................
     useEffect(() => {
+
+        
         getStaticData()
         // getData()
      
