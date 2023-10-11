@@ -2,11 +2,14 @@ import React, { Suspense } from 'react'
 import './App.css'
 
 import * as THREE from 'three';
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import CircleImg from './assets/circle.png'
 import { Suspense } from 'react';
 
+
 const Points = ()=>{
+  const imgTex = useLoader(THREE.TextureLoader,CircleImg);
+
 
   <Points>
 
@@ -14,7 +17,16 @@ const Points = ()=>{
 
     </bufferGeometry>
 
-    <pointsMaterial  attach='meterial'/>
+    <pointsMaterial  
+    attach='meterial'
+    map={imgTex}
+    color={0x00AAFF}
+    size={0.5}
+    sizeAttenuation
+    transparent={false}
+    alphaTest={0.5}
+    opacity={1.0}
+    />
   </Points>
 
 }
