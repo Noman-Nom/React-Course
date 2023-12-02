@@ -12,7 +12,7 @@ const Header = () => {
                 // ye sab props hamen carousal k web se milen hen
                 showThumbs={false}
                 autoPlay={true}
-                transitionTime={3}
+                transitionTime={1}
                 infiniteLoop={true}
                 showStatus={false}
             >
