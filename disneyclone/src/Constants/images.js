@@ -49,6 +49,38 @@ import card20 from '../Assets/card 20.webp'
 
 
 
+import poster1 from '../Assets/poster 1.png'
+import poster2 from '../Assets/poster 1.webp'
+import poster3 from '../Assets/poster 2.png'
+import poster4 from '../Assets/poster 2.webp'
+import poster5 from '../Assets/poster 3.webp'
+import poster6 from '../Assets/poster 3.png'
+import poster7 from '../Assets/poster 4.png'
+import poster8 from '../Assets/poster 4.webp'
+import poster9 from '../Assets/poster 5.png'
+import poster10 from '../Assets/poster 5.webp'
+import poster11 from '../Assets/poster 6.webp'
+import poster12 from '../Assets/poster 6.png'
+import poster13 from '../Assets/poster 7.png'
+import poster14 from '../Assets/poster 7.webp'
+import poster15 from '../Assets/poster 8.webp'
+import poster16 from '../Assets/poster 8.png'
+import poster17 from '../Assets/poster 9.png'
+import poster18 from '../Assets/poster 9.png'
+import poster19 from '../Assets/poster 10.webp'
+import poster20 from '../Assets/poster 10.webp'
+import poster21 from '../Assets/poster 11.png'
+import poster22 from '../Assets/poster 12.png'
+import poster23 from '../Assets/poster 13.webp'
+import poster24 from '../Assets/poster 14.webp'
+import poster25 from '../Assets/poster 15.webp'
+import poster26 from '../Assets/poster 16.webp'
+import poster27 from '../Assets/poster 17.webp'
+import poster28 from '../Assets/poster 18.webp'
+
+
+
+
 
 
 export default {
@@ -97,4 +129,33 @@ export default {
     card18,
     card19,
     card20,
+    poster1,
+    poster2,
+    poster3,
+    poster4,
+    poster5,
+    poster6,
+    poster7,
+    poster8,
+    poster9,
+    poster11,
+    poster12,
+    poster13,
+    poster14,
+    poster15,
+    poster16,
+    poster17,
+    poster18,
+    poster19,
+    poster20,
+    poster21,
+    poster22,
+    poster23,
+    poster24,
+    poster25,
+    poster26,
+    poster27,
+    poster28,
+
+
 }
