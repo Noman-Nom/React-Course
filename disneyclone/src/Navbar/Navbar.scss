@@ -25,16 +25,19 @@ nav {
             height: 40px;
             // border: 1px solid white;
             margin-top: -14px;
+            
 
 
             svg {
                 color: rgb(199, 199, 199);
                 font-size: 25px;
                 margin-top: 10px;
+                cursor: pointer;
             }
 
             img {
                 width: 80%;
+                cursor: pointer;
 
             }
         }
@@ -59,12 +62,14 @@ nav {
             li {
                 list-style: none;
                 margin: 10px;
+                cursor: pointer;
 
                 a {
                     text-decoration: none;
                     color: white;
                     text-transform: uppercase;
                     font-weight: 500;
+                    cursor: pointer;
                 }
 
                 div {
@@ -96,6 +101,7 @@ nav {
 
             img {
                 width: 100%;
+                cursor: pointer;
             }
         }
 
@@ -146,6 +152,7 @@ nav {
                 font-weight: 600;
                 border: 0;
                 border-radius: 5px;
+                cursor: pointer;
             }
             .login-btn{
                 padding: 4px 6px;
