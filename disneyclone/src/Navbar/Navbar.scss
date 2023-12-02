@@ -102,10 +102,29 @@ nav {
     }
     .nav__right{
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-end;
-        border: 1px solid white;
+        // border: 1px solid white;
         width: 500px;
+
+        .nav__right-search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            input{
+                outline: 0;
+                border: 0;
+                border-bottom: 1px solid white;
+                padding: 3px 8px;
+                width: 100%;
+                background-color: #131926;
+                color: white;
+                font-size: 13px;
+
+
+            }
+        }
     }
 
 }
