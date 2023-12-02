@@ -5,18 +5,37 @@ import { Carousel } from 'react-responsive-carousel';
 import { sliderData } from '../DataSource';
 
 const Header = () => {
-  return (
-    <div className='slider'>
-        {sliderData.map((item)=>(
-            <div>
-                <img src={item.image} alt={item.title} />
-                
-            </div>
+    return (
+        <div className='slider'>
 
-        ))}
+            <Carousel
+                // ye sab props hamen carousal k web se milen hen
+                showThumbs={false}
+                autoPlay={true}
+                transitionTime={3}
+                infiniteLoop={true}
+                showStatus={false}
+            >
+                {sliderData.map((item) => (
+                    <div key={item.id} className='slider__images'>
 
-    </div>
-  )
+                        <div className='slider__images-single'>
+                            <img src={item.image} alt={item.title} />
+
+                        </div>
+                        <div className='slider__images-info'>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                        </div>
+
+
+                    </div>
+
+                ))}
+            </Carousel>
+
+        </div>
+    )
 }
 
 export default Header
