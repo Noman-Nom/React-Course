@@ -18,14 +18,14 @@ const Header = () => {
             >
                 {sliderData.map((item) => (
                     <div key={item.id} className='slider__data'>
+                        <div className='slider__images-info'>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                        </div>
 
                         <div className='slider__images-single'>
                             <img src={item.image} alt={item.title} />
 
-                        </div>
-                        <div className='slider__images-info'>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
                         </div>
 
 
