@@ -1,0 +1,26 @@
+.slider{
+    background-color: #0C111B;
+    padding: 30px;
+    height: 700px;
+    // border: 1px solid white;
+
+    .slider__data{
+        position: relative;
+     
+       border: 1px solid white;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+
+       .slider__images-single{
+        width: 100%;
+        height: 500px;
+       }
+       img{
+        height: 100%;
+        width: 100%;
+       }
+
+    }
+}

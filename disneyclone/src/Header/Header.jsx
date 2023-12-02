@@ -17,7 +17,7 @@ const Header = () => {
                 showStatus={false}
             >
                 {sliderData.map((item) => (
-                    <div key={item.id} className='slider__images'>
+                    <div key={item.id} className='slider__data'>
 
                         <div className='slider__images-single'>
                             <img src={item.image} alt={item.title} />
