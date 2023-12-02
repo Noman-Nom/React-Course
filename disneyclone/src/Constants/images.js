@@ -17,6 +17,7 @@ import slider1 from '../Assets/slider-badag.jpg'
 import slider2 from '../Assets/slider-badging.jpg'
 import slider3 from '../Assets/slider-scale.jpg'
 import slider4 from '../Assets/slider-scales.jpg'
+
 import viewers1 from '../Assets/viewers-disney.png'
 import viewers2 from '../Assets/viewers-marvel.png'
 import viewers3 from '../Assets/viewers-national.png'
@@ -25,6 +26,11 @@ import viewers5 from '../Assets/viewers-starwars.png'
 import mainLogo from '../Assets/threeLines.svg'
 import kids from '../Assets/kids.svg'
 
+import slider5 from '../Assets/slider 1.png'
+import slider6 from '../Assets/slider 2.png'
+import slider7 from '../Assets/slider 3.png'
+import slider8 from '../Assets/slider 4.png'
+import slider9 from '../Assets/slider 5.png'
 
 // poster and cards
 
@@ -159,7 +165,12 @@ export default {
     poster27,
     poster28,
     mainLogo,
-    kids
+    kids,
+    slider5,
+    slider6,
+    slider7,
+    slider8,
+    slider9,
 
 
 }
