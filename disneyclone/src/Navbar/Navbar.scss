@@ -3,6 +3,8 @@ nav{
     display: flex;
     flex-direction: row;
     padding: 20px;
+    justify-content: space-between;
+    align-items: center;
 
     .nav__left{
         display: flex;
