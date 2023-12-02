@@ -22,6 +22,7 @@ import viewers2 from '../Assets/viewers-marvel.png'
 import viewers3 from '../Assets/viewers-national.png'
 import viewers4 from '../Assets/viewers-pixar.png'
 import viewers5 from '../Assets/viewers-starwars.png'
+import mainLogo from '../Assets/threeLines.svg'
 
 
 // poster and cards
@@ -156,6 +157,7 @@ export default {
     poster26,
     poster27,
     poster28,
+    mainLogo,
 
 
 }
